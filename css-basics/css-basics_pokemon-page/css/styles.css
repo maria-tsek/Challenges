@@ -5,11 +5,19 @@
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
 
 /* your solution */
+*{
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -21,6 +29,10 @@
 /* Task 3: To set the line height to 1.5 is good for texts, because of accessibility concerns, but for the headings it seems too much. Let's change this by giving our headings a line height of 1.2: */
 
 /* your solution */
+h1,h2,h3,h4,h5,h6{
+  line-height: 1.2;
+}
+
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
 
@@ -29,9 +41,12 @@
 - Add a padding of 10px
 - Center the text of the heading
 */
-
+/* your solution */
 .title {
-  /* your solution */
+  background-color: white;
+  margin-top: 0 ;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
@@ -45,8 +60,18 @@
 */
 
 section {
-  /* your solution */
+  background-color: white;
+  padding: 20px;
+  margin: 10;
+  border-left: 5pc solid orange;
+
+  
 }
+.favourites{
+  color: gold;
+
+}
+
 
 /* ------- Headings Part 2 ------- */
 
@@ -57,9 +82,17 @@ section {
 - The right border should end with the last character of the title. Hint: If you don't know how to do this, think about the display property.
 - Bonus: The color of the border of "Favourite Pokémon" should be "orange". Hint: You may need another CSS rule.
 */
-
-.subtitle {
-  /* your solution */
+/* your solution */
+.subtitle { 
+  
+  padding: 10px 20px; 
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  display: inline-block;
+ 
+}
+.favourites{
+  border: 10px solid orange;
 }
 
 /* ------- List ------- */
@@ -67,13 +100,13 @@ section {
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
 /* add selector */
- {
+ ul {
   list-style: "🧡";
   padding-left: /* add value */ ;
 }
 
 /* add selector */
- {
+ li {
   padding-left: /* add value */ ;
 }
 

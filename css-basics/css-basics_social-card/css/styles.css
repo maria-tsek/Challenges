@@ -1,3 +1,13 @@
 * {
   box-sizing: border-box;
 }
+h2{
+  text-transform: uppercase;
+}
+
+button{
+  background-color: red;
+border: 20px;
+
+
+}

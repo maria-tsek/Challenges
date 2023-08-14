@@ -1,6 +1,13 @@
-* {
+*.navigation__menu {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+} 
+
+{
   box-sizing: border-box;
 }
+
 
 body {
   margin: 0;

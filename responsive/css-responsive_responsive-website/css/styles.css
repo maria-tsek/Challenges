@@ -137,6 +137,7 @@ fairly essential to completing this challenge. */
   margin-top: var(--main-content-margin-top);
   padding: var(--gap) 0 var(--gap) 0;
   background: var(--navy-blue);
+
 }
 
 .intro-text {
@@ -251,3 +252,144 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+/* Tablet Layout*/
+
+/*@media screen and (min-width: 768px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+  }
+}
+
+/* Desktop Layout*/
+/*@media screen and (min-width: 1200px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+  }
+
+  .intro-text {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-card.--mountain,
+  .product-card.--river,
+  .product-card.--ocean,
+  .product-card.--desert {
+    width: 100%;
+  }
+}
+
+/* Desktop Layout (Full Width) */
+/*@media screen and (min-width: 1600px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .intro-text {
+    grid-column: 1 / span 1;
+    grid-row: 3;
+  }
+
+  .product-card.--forest {
+    grid-column: 1 / span 3;
+    width: 100%;
+  }
+
+  .product-card.--mountain {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .product-card.--river {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .product-card.--ocean {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .product-card.--desert {
+    grid-column: 3;
+    grid-row: 4;
+  }
+}*/
+
+/* Tablet Layout  */
+@media screen and (min-width: 768px) {
+  .card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
+}
+
+/* Desktop Layout  */
+@media screen and (min-width: 1200px) {
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+  .intro-text {
+    flex-basis: 100%;
+    order: 2;
+  }
+
+  .product-card {
+    flex-basis: 100%;
+  }
+
+  .product-card.--mountain,
+  .product-card.--river,
+  .product-card.--ocean,
+  .product-card.--desert {
+    flex-basis: 100%;
+  }
+}
+
+/* Desktop Layout  */
+@media screen and (min-width: 1600px) {
+  .main-content {
+    flex-wrap: wrap;
+  }
+
+  .intro-text {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .product-card.--forest {
+    flex-basis: 100%;
+  }
+
+  .product-card.--mountain {
+    flex-basis: calc(50% - var(--gap));
+  }
+
+  .product-card.--river,
+  .product-card.--ocean,
+  .product-card.--desert {
+    flex-basis: calc(33.33% - var(--gap));
+  }
+}
+
+
+
+
+
+
+
+

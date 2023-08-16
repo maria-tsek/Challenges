@@ -1,6 +1,12 @@
-* {
+*.navigation__menu {
+  display:flex;
+  justify-content:space-between;
+} 
+
+{
   box-sizing: border-box;
 }
+
 
 body {
   margin: 0;

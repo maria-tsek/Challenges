@@ -9,14 +9,26 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
+const title = "Media Post";
+const text = "Explore my media post";
+let numberOfLikes = 50;
+const postCreator="Maria";
+const isReported=false;
 
-// --^-- write your code here --^--
+
+
 
 /*
 2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
 */
 
-// --v-- write your code here --v--
+console.log("Title", title);
+console.log("Text", text);
+console.log("Likes", numberOfLikes);
+console.log("Creator of the post:", postCreator);
+console.log("Reported", isReported);
+//increase the likes by one
+numberOfLikes = numberOfLikes + 1;
 
-// --^-- write your code here --^--
+console.log("New number of like", numberOfLikes);
+

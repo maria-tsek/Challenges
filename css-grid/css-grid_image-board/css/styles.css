@@ -32,11 +32,15 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  display: grid;
+  grid-column: span 1/1
+
+
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  display: grid;
+ 
 }
 
 .image-board__image--3 {
@@ -44,7 +48,9 @@ body {
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  display:grid;
+  
+  
 }
 
 .image-board__image--5 {

@@ -50,27 +50,49 @@ const people = [
 // EXERCISE 1
 // Change the value of the variable nameOfFirstPerson to equal the name of the first person.
 
+<<<<<<< Updated upstream
 const nameOfFirstPerson = "Homer"; 
+=======
+const nameOfFirstPerson = people[0].name;
+>>>>>>> Stashed changes
 
 // EXERCISE 2
 // Change the value of the variable homersOtherFriends to equal the other friends of Homer.
 
+<<<<<<< Updated upstream
 const homersOtherFriends = ["Barney Gumble", "Carl Carlson", "Lenny Leonard"];
+=======
+const homersOtherFriends = people[0]["other friends"];
+>>>>>>> Stashed changes
 
 // EXERCISE 3
 // Change the value of the variable ageOfThirdPerson to equal the age of the third person.
 
+<<<<<<< Updated upstream
 const ageOfThirdPerson = 10;
+=======
+const ageOfThirdPerson = people[2].age;
+>>>>>>> Stashed changes
 
 // EXERCISE 4
 // Change the value of the variable mothersNameOfSecondPerson to equal the mothers name of the second person.
 
+<<<<<<< Updated upstream
 const mothersNameOfSecondPerson = "Jacqueline Bouvier";
+=======
+const mothersNameOfSecondPerson = people[1].parents.mothersName;
+
+
+>>>>>>> Stashed changes
 
 // EXERCISE 5
 // Change the value of the variable animaltypeOfLisasPet to equal the type of animal of Lisas pet.
 
+<<<<<<< Updated upstream
 const animaltypeOfLisasPet =  "dog";
+=======
+const animaltypeOfLisasPet = people[3].pet.animal;
+>>>>>>> Stashed changes
 
 export {
   nameOfFirstPerson,

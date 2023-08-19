@@ -2,7 +2,7 @@ console.clear();
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
     // Select the body element using the data-js attribute
     const bodyElement = document.querySelector('[data-js="body"]');
     
@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleModeButton.addEventListener("click", () => {
       bodyElement.classList.toggle("dark"); 
     });
-  });
+  
   
   

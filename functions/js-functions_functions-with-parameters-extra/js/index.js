@@ -6,7 +6,10 @@ console.clear();
    The formula is: square = number * number
 */
 
-function printSquare(number) {}
+function printSquare(number) {
+   var square = number * number;
+   console.log(square);
+}
 
 printSquare(3);
 printSquare(5);
@@ -16,11 +19,16 @@ printSquare(5);
    the circumference to the console. The function does not exist yet.
    The formula is: circumference = 2 * Pi * radius
 */
+function printCircumference(radius) {
+   var circumference = 2 * Math.PI * radius;
+   console.log(circumference);
+}
+
 
 // Uncomment the following function calls and implement the function printCircumference
 
-// printCircumference(4);
-// printCircumference(6);
+printCircumference(4);
+printCircumference(6);
 
 /*
 3: We want to use a function which accepts the width and length of a rectangle
@@ -28,9 +36,14 @@ printSquare(5);
    The function should print the correct area instead of the question mark "?".
    The function does not exist yet.
    The formula is: area = width * length
+
+
 */
 
-// Uncomment the following function calls and implement the function printRectangleArea
+function printRectangleArea(width, length) {
+   var area = width * length;
+   console.log("The area of the rectangle is " + area);
+}
 
-// printRectangleArea(5, 7);
-// printRectangleArea(3, 4));
+printRectangleArea(5, 7); 
+printRectangleArea(3, 4); 

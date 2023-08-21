@@ -5,7 +5,9 @@ Rewrite the following functions as arrow functions.
 Use implicit returns when possible
 */
 
-function getCurrentHour() {
+
+
+const getCurrentHour = () => {
   const now = new Date();
   const currentHour = now.getHours();
   if (currentHour === 0) {
@@ -31,7 +33,7 @@ function cleanInput(string) {
 Rewrite the following arrow functions as classic functions.
 */
 
-const isOddAndSmall = (number) => {
+function isOddAndSmall(number){
   if (number > 10) {
     return false;
   }
@@ -43,6 +45,10 @@ const isOddAndSmall = (number) => {
   return true;
 };
 
-const add3 = (a, b, c) => a + b + c;
+const add3 = function(a, b, c) {
+  return a + b + c;
+} 
 
-const repeat10 = (string) => string.repeat(10);
+const repeat10 = function(string){
+  return string.repeat(10);
+}

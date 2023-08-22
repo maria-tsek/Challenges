@@ -1,3 +1,46 @@
 * {
   box-sizing: border-box;
 }
+h4{
+  text-transform: uppercase;
+  color: black;
+
+}
+
+button{
+  color: skyblue;
+border: 20px;
+background-color: white;
+}
+img {
+	width: 90px;
+	height: 90px;
+	border-radius: 5px;
+}
+
+.repo {
+  font-weight: 700;
+  color: black;
+
+}
+.account{
+  color: lightgray;
+  font-weight: 100;
+  
+}
+
+body{
+
+    background-color: whitesmoke;
+  
+}
+
+article{
+  background-color: white;
+ margin: 10px;
+ border-radius: 10px;
+ padding: 20px;
+
+}
+
+

@@ -19,22 +19,63 @@
       <form aria-labelledby="form-heading" aria-describedby="form-description">
         <fieldset>
           <legend>Enter your information</legend>
-
           <!-- Email: label & input -->
-
+          <label for="Email">Email:</label>
+          <input name="Email" id="Email" />
           <!-- Date: label & input -->
+          <label for="Date">Date:</label>
+          <input type="date" id="Date" />
 
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
-            <!-- Radio Buttons: labels & inputs -->
+            <label for="relaxed_sloths">relaxed sloths:</label>
+            <input
+              id="relaxed_sloths"
+              name="special_aninmals"
+              type="radio"
+              value="sloths"
+            />
+            <label for="jumpy_kangaroos"> jumpy kangaroos:</label>
+            <input
+              id="jumpy_kangaroos"
+              name="special_aninmals"
+              type="radio"
+              value="kangaroos"
+            />
+            <label for="thieving racoons">Thieving racoons</label>
+            <input
+              id="thieving racoons"
+              name="special_aninmals"
+              type="radio"
+              value="racoons"
+            />
           </fieldset>
-
+          <label for="concerns">Any Concerns: </label>
+          <textarea id="concerns" name="concerns" rows="7" cols="50"></textarea>
           <!-- Textarea: label & input -->
+          <label for="privacy_policy">
+            Accept privacy policy:
+            <input
+              id="privacy_policy"
+              name="privacy_policy"
+              type="checkbox"
+              value="privacy_policy"
+            />
+          </label>
 
-          <!-- Two Checkboxes: labels & inputs -->
+          <label for="newsletter">
+            Subscribe newsletter:
+            <input
+              id="newsletter"
+              name="newsletter"
+              type="checkbox"
+              value="newsletter"
+            />
+          </label>
 
-          <!-- Two Buttons: reset & submit -->
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
         </fieldset>
       </form>
     </section>

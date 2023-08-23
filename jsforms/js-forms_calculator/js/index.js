@@ -16,8 +16,16 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
+  if (b === 0) {
+    return "Cannot divide by zero";
+  }
   return a / b;
 }
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  resultOutput.textContent = result;
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();

@@ -29,14 +29,14 @@ inputColor.addEventListener("input", function () {
 
 inputRadius.addEventListener("input", function () {
   const inputRadiusValue = this.value;
-  if (inputRadiusValue === inputRadius.max) {
-    box.style.borderRadius = "50%";
-  } else {
-    box.style.borderRadius = `${inputRadiusValue}%`;
-  }
+  //   if (inputRadiusValue === inputRadius.max) {
+  //     box.style.borderRadius = "50%";
+  //   } else {
+  box.style.borderRadius = `${inputRadiusValue}%`;
+  //   }
 });
 
 inputRotation.addEventListener("input", function () {
-  const inputRotationValue = this.value;
+  const inputRotationValue = inputRotation.value;
   box.style.transform = `rotate(${inputRotationValue}deg)`;
 });

@@ -29,8 +29,6 @@ pizzaInput2.addEventListener("input", () => {
 });
 
 // Task 1
-// define the function calculatePizzaGain here
-
 function calculatePizzaGain(diameter1, diameter2) {
   // Calculate the radii of the pizzas
   var radius1 = diameter1 / 2;

@@ -19,4 +19,15 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+// Create colored boxes from the array of hex codes
+colors.forEach((color) => {
+  renderColorBox(color);
+});
+
+// Create a new function called renderColorBox
+function renderColorBox(color) {
+  const colorBox = document.createElement("div");
+  colorBox.classList.add("color-box");
+  colorBox.style.backgroundColor = color;
+  document.body.appendChild(colorBox);
+}

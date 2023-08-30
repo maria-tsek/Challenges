@@ -58,3 +58,23 @@ body {
   color: white;
   text-decoration: none;
 }
+
+
+.teaser-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.teaser-grid__teaser--spring {
+  grid-area: 1 / 1;
+}
+.teaser-grid__teaser--summer {
+  grid-area: 1 / 2;
+}
+.teaser-grid__teaser--autumn {
+  grid-area: 2 / 1;
+}
+.teaser-grid__teaser--winter {
+  grid-area: 2 / 2;
+}

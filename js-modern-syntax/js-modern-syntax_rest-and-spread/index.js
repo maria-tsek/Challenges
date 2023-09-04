@@ -52,5 +52,4 @@ export const result = add(...numbers);
 
 const fruits = ["apple", "banana", "orange", "papaya"];
 const anotherFruit = "cherry";
-const allFruits = [anotherFruit, ...fruits];
-export { allFruits };
+export const allFruits = [anotherFruit, ...fruits];

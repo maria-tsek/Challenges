@@ -48,15 +48,16 @@ async function fetchDataAndRender() {
       console.log("Bad request");
     } else {
       console.log("Great the fetch worked");
-    }
-    const data = await response.json();
-    console.log("Data", data);
 
-    // Task 2
-    data.results.forEach((card) => {
-      const cardElement = Card(card);
-      renderElement(cardElement);
-    });
+      const data = await response.json();
+      console.log("Data", data);
+
+      // Task 2
+      data.results.forEach((card) => {
+        const cardElement = Card(card);
+        renderElement(cardElement);
+      });
+    }
   } catch (error) {
     console.error("Error fetching data:", error);
   }

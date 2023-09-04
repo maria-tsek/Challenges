@@ -4,21 +4,35 @@ const button5 = document.querySelector('[data-js="sleep-5-button"]');
 const button10 = document.querySelector('[data-js="sleep-10-button"]');
 const body = document.body;
 
-// --v-- code here --v--
+function toggleDarkMode(enable) {
+  if (enable) {
+    body.classList.add("dark");
+  } else {
+    body.classList.remove("dark");
+  }
+}
 
 button3.addEventListener("click", async () => {
   icon.textContent = "💤";
-  sleep(3);
+  toggleDarkMode(true);
+  await sleep(3);
+  toggleDarkMode(false);
   icon.textContent = "⏰";
 });
 
-button5.addEventListener("click", () => {
+button5.addEventListener("click", async () => {
+  toggleDarkMode(true);
   icon.textContent = "💤";
+  await sleep(5);
+  toggleDarkMode(false);
   icon.textContent = "⏰";
 });
 
-function handleSleepFor10Button() {
+async function handleSleepFor10Button() {
+  toggleDarkMode(true);
   icon.textContent = "💤";
+  await sleep(10);
+  toggleDarkMode(false);
   icon.textContent = "⏰";
 }
 

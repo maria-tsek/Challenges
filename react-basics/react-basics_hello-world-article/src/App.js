@@ -2,5 +2,14 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <div>Replace me with your Component!</div>;
+  return HelloWorldarticle;
+}
+
+function HelloWorldarticle() {
+  <div>
+    <article className="article">
+      <h1>Hello World</h1>
+      <p>Hello!</p>
+    </article>
+  </div>;
 }

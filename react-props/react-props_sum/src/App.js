@@ -2,5 +2,16 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  const valueA = 1;
+  const valueB = 2;
+  return (
+    <div>
+      <Sum valueA={valueA} valueB={valueB} />
+    </div>
+  );
+}
+
+function Sum({ valueA, valueB }) {
+  const sum = valueA + valueB;
+  return <p>{`${valueA} + ${valueB} = ${sum}`}</p>;
 }

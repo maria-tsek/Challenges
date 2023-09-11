@@ -3,20 +3,34 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <div>
-      <Button color="blue" disabled={false} text="Click me" />
-      <Button color="red" disabled={true} text="Disabled button" />
-    </div>
+    <>
+      <Button
+        onButtonclick={() => {
+          console.log("click 1");
+        }}
+        color="green"
+        disabled={false}
+        text="Hi"
+      />
+      <Button
+        onButtonclick={() => {
+          console.log("click 2");
+        }}
+        color="green"
+        disabled={false}
+        text="Hello"
+      />
+    </>
   );
 }
 
-function Button({ color, disabled, text }) {
-  const buttonStyle = {
-    color: color,
-  };
-
+function Button({ color = "blue", disabled, text, onButtonclick }) {
   return (
-    <button disabled={disabled} style={buttonStyle}>
+    <button
+      onClick={onButtonclick}
+      disabled={disabled}
+      style={{ backgroundColor: color, color: "white" }}
+    >
       {text}
     </button>
   );

@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "./Image";
+import avatar from "../img/avatar.jpg";
 
-function Avatar() {
+export default function Avatar() {
   return (
-    <button
-      type="button"
-      onClick={() => console.log("I could toggle a profile!")}
-      aria-label="toggle profile"
-    >
-      <Image src="./src/img/avatar.jpg" alt="avatar" />
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={() => console.log("I could toggle a profile!")}
+        aria-label="toggle profile"
+      >
+        <Image src={avatar} alt="avatar" />
+      </button>
+    </>
   );
 }
-
-export default Avatar;

@@ -3,6 +3,7 @@ import "./styles.css";
 
 export default function App() {
   const [isActive, setIsActive] = useState(false);
+
   function handleClick() {
     setIsActive(!isActive);
     // Check that the value changes correctly.
@@ -12,7 +13,9 @@ export default function App() {
   return (
     <main>
       <div className={`box ${isActive ? "box--active" : ""}`} />
-      <button onClick={handleClick}>Activate</button>
+      <button onClick={handleClick}>
+        {isActive ? "Active" : "Deactivate"}
+      </button>
     </main>
   );
 }

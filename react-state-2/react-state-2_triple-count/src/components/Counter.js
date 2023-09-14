@@ -4,9 +4,9 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   function handleIncrement() {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   }
 
   return (
@@ -17,7 +17,7 @@ export default function Counter() {
         className="counter__button"
         onClick={handleIncrement}
       >
-        Increment count by 3
+        Increment count by {count}
       </button>
     </div>
   );

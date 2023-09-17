@@ -53,13 +53,31 @@ function App() {
 
     setEntries([updatedNewEntry, ...entries]);
   }
+  //handleToggleFavorite function
+  function handleToggleFavorite(id) {
+    // Update the state by mapping over the entries and toggling isFavorite for the matching entry
+    const updatedEntries = entries.map((entry) => {
+      if (entry.id === id) {
+        return {
+          ...entry,
+          isFavorite: !entry.isFavorite,
+        };
+      }
+      return entry;
+    });
+    //  updated entries as the new state
+    setEntries(updatedEntries);
+  }
 
   return (
     <div className="app">
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        <EntriesSection
+          entries={entries}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </main>
       <Footer />
     </div>

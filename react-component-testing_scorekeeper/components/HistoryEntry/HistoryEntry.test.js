@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import HistoryEntry from ".";
 
-test.skip("renders name of game and 'show score' button only", () => {
+test("renders name of game and 'show score' button only", () => {
   render(
     <HistoryEntry
       nameOfGame="Dodelido"
@@ -13,14 +13,14 @@ test.skip("renders name of game and 'show score' button only", () => {
     />
   );
 
-  const nameOfGame = screen.getByText(/dodelido/i);
-  const button = screen.getByRole("button", { name: /show score/i });
+  const nameOfGame = screen.getByText(/Dodelido/i);
+  const button = screen.getByRole("button", { name: /Display more/i });
 
   expect(nameOfGame).toBeInTheDocument();
   expect(button).toBeInTheDocument();
 });
 
-test.skip("renders player names and scores after button click", async () => {
+test("renders player names and scores after button click", async () => {
   render(
     <HistoryEntry
       nameOfGame="Dodelido"
@@ -31,8 +31,8 @@ test.skip("renders player names and scores after button click", async () => {
     />
   );
 
-  const noPlayer1 = screen.queryByText(/john/i);
-  const noPlayer2 = screen.queryByText(/jane/i);
+  const noPlayer1 = screen.queryByText(/John/i);
+  const noPlayer2 = screen.queryByText(/Jane/i);
   const noPlayerScore1 = screen.queryByText(/2/i);
   const noPlayerScore2 = screen.queryByText(/1/i);
 
@@ -41,11 +41,11 @@ test.skip("renders player names and scores after button click", async () => {
   expect(noPlayerScore1).not.toBeInTheDocument();
   expect(noPlayerScore2).not.toBeInTheDocument();
 
-  const button = screen.getByRole("button", { name: /show score/i });
+  const button = screen.getByRole("button", { name: /Display more/i });
   await userEvent.click(button);
 
-  const player1 = screen.getByText(/john/i);
-  const player2 = screen.getByText(/jane/i);
+  const player1 = screen.getByText(/John/i);
+  const player2 = screen.getByText(/Jane/i);
   const playerScore1 = screen.getByText(/2/i);
   const playerScore2 = screen.getByText(/1/i);
 

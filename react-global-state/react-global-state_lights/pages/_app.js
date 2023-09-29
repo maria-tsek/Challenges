@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { useState } from "react";
 
 export default function App({ Component, pageProps }) {
-  //state of the light
+  // State for lights
   const initialLights = [
     { id: "1", name: "Living Room", isOn: false },
     { id: "2", name: "Kitchen", isOn: false },
@@ -17,9 +17,10 @@ export default function App({ Component, pageProps }) {
 
   const [lights, setLights] = useState(initialLights);
 
-  const handleToggle = (lightId) => {
-    setLights(
-      lights.map((light) =>
+  // Function to toggle a light based on its id
+  const toggleLight = (lightId) => {
+    setLights((prevLights) =>
+      prevLights.map((light) =>
         light.id === lightId ? { ...light, isOn: !light.isOn } : light
       )
     );
@@ -28,7 +29,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} lights={lights} toggleLights={handleToggle} />
+      <Component {...pageProps} lights={lights} toggleLight={toggleLight} />
     </Layout>
   );
 }

@@ -5,7 +5,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 function ProductsPage() {
   const { data, error } = useSWR("/api/products", fetcher);
 
-  if (error) return <div>Error loading data</div>;
+  if (error) return <div>{error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
   return (
@@ -16,8 +16,7 @@ function ProductsPage() {
           <li key={product.id}>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
-            <p>{product.currency}</p>
+            <p>Price: €{product.price}</p>
             <p>{product.category}</p>
           </li>
         ))}

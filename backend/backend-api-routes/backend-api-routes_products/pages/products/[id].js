@@ -9,6 +9,10 @@ function ProductDetail() {
 
   const { data, error } = useSWR(`/api/products/${id}`, fetcher);
 
+  if (id === undefined) {
+    return <div>Loading...</div>;
+  }
+
   if (error) {
     return <div>Error loading product data: {error.message}</div>;
   }
@@ -16,7 +20,6 @@ function ProductDetail() {
   if (!data) {
     return <div>Loading...</div>;
   }
-  console.log("data:", data);
 
   return (
     <div>

@@ -7,17 +7,15 @@ function ProductDetail() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { data, error } = useSWR(`/api/products/${id}`, fetcher);
+  const { data, isLoading, error } = useSWR(`/api/products/${id}`, fetcher);
 
-  if (id === undefined) {
-    return <div>Loading...</div>;
-  }
+  if (!data) return;
 
   if (error) {
     return <div>Error loading product data: {error.message}</div>;
   }
 
-  if (!data) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 

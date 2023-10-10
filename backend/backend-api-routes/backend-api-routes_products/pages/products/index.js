@@ -3,10 +3,10 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function ProductsPage() {
-  const { data, error } = useSWR("/api/products", fetcher);
+  const { data, isLoading, error } = useSWR("/api/products", fetcher);
 
   if (error) return <div>{error.message}</div>;
-  if (!data) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <div>
